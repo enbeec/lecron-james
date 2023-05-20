@@ -45,7 +45,7 @@ Because I'm using a custom deploy script I had to do an extra configuration step
 
 In `Project Settings` -> `Git` -> `Ignored Build Step` set the command to `exit 0` to disable automatic deployments.
 
-For a more serious project there is certainly a way to make automatic and preview builds work -- I just didn't want to fuss with it for a toy.
+For a more serious project there is certainly a way to make automatic and preview builds work. I just didn't want to fuss with it for a toy.
 
 ## Cron-Only Guard
 
