@@ -41,11 +41,11 @@ export const checkEnv = () => {
 export const useEnv = (): [Storage, string] => [
     // the pattern I like is to "justify" all ! assertions (see checkEnv)
     Storage({
-        endpoint: process.env.STORAGE_ENDPOINT!,
-        region: process.env.STORAGE_REGION!,
-        accessKeyId: process.env.STORAGE_ACCESSKEY!,
-        secretAccessKey: process.env.STORAGE_SECRETKEY!,
-        Bucket: process.env.STORAGE_BUCKET!,
+        endpoint: process.env.STORAGE_ENDPOINT!.trim(),
+        region: process.env.STORAGE_REGION!.trim(),
+        accessKeyId: process.env.STORAGE_ACCESSKEY!.trim(),
+        secretAccessKey: process.env.STORAGE_SECRETKEY!.trim(),
+        Bucket: process.env.STORAGE_BUCKET!.trim(),
     }),
-    process.env.FREENBA_APIKEY!,
+    process.env.FREENBA_APIKEY!.trim(),
 ];
