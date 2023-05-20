@@ -9,7 +9,12 @@
   "license": "MIT",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.335.0",
+    "@aws-sdk/smithy-client": "^3.329.0",
     "@vercel/node": "^2.14.2",
     "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.1",
+    "typescript": "^5.0.4"
   }
 }
