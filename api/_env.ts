@@ -2,6 +2,7 @@ import { Storage } from './_storage.util';
 
 export interface Env {
     FREENBA_APIKEY: string;
+    LECRON_KEY: string;
     STORAGE_ACCESSKEY: string;
     STORAGE_SECRETKEY: string;
     STORAGE_ENDPOINT: string;
@@ -11,6 +12,7 @@ export interface Env {
 
 /* Example .env
  *    FREENBA_APIKEY=[...]
+ *    LECRON_KEY=[...]
  *    STORAGE_ACCESSKEY=[...]
  *    STORAGE_SECRETKEY=[...]
  *    STORAGE_ENDPOINT=https://us-southeast-1.linodeobjects.com
@@ -21,6 +23,7 @@ export interface Env {
 export const checkEnv = () => {
     const envKeys = [
         'FREENBA_APIKEY',
+        'LECRON_KEY',
         'STORAGE_ACCESSKEY',
         'STORAGE_SECRETKEY',
         'STORAGE_ENDPOINT',
@@ -38,7 +41,7 @@ export const checkEnv = () => {
         );
 }
 
-export const useEnv = (): [Storage, string] => [
+export const useEnv = (): [Storage, string, string] => [
     // the pattern I like is to "justify" all ! assertions (see checkEnv)
     Storage({
         endpoint: process.env.STORAGE_ENDPOINT!.trim(),
@@ -48,4 +51,5 @@ export const useEnv = (): [Storage, string] => [
         Bucket: process.env.STORAGE_BUCKET!.trim(),
     }),
     process.env.FREENBA_APIKEY!.trim(),
+    process.env.LECRON_KEY!.trim(),
 ];

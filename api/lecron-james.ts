@@ -5,7 +5,7 @@ import { LeBron, isLeBron } from './_types';
 import { checkEnv, useEnv } from './_env';
 
 export default function handler(
-    _: VercelRequest,
+    request: VercelRequest,
     response: VercelResponse
 ) {
     try {
@@ -21,7 +21,15 @@ export default function handler(
         return;
     }
 
-    const [{ uploadLeBron }, apikey] = useEnv();
+    const [{ uploadLeBron }, apikey, lecronkey] = useEnv();
+
+    const querykey = request.query.key;
+    if (querykey !== lecronkey) {
+        // do not log if someone pinged the endpoint without a key at all
+        if (querykey) console.error(`Key mismatch: got ${querykey}`);
+
+        response.status(404).end();
+    }
 
     // you can do this without nested callbacks with an async handler, try/catch and await
     axios
