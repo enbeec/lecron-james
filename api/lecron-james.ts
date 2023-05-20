@@ -29,6 +29,7 @@ export default function handler(
         if (querykey) console.error(`Key mismatch: got ${querykey}`);
 
         response.status(404).end();
+        return
     }
 
     // you can do this without nested callbacks with an async handler, try/catch and await
