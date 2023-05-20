@@ -1,7 +1,8 @@
-import { S3Client, S3ClientConfig, PutObjectCommand } from '@aws-sdk/client-s3';
+import { S3Client, S3ClientConfig, PutObjectCommand, PutObjectCommandInput } from '@aws-sdk/client-s3';
 
 import { LeBron } from './_types';
 
+/** Fake class -- just call `Storage()` rather than `new Storage()`. */
 export function Storage({
     endpoint,
     region,
