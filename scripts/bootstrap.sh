@@ -38,6 +38,7 @@ do_bootstrap() {
 }
 
 undo_bootstrap() {
+    set +e
     for i in "${!env[@]}"; do
         key="${env[$i]%=*}"     # trim =* from end
         val="${env[$i]#*=}"     # trim *= from beginning
