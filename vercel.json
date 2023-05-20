@@ -1,0 +1,8 @@
+{
+    "crons": [
+        {
+            "path": "/api/lecron-james",
+            "schedule": "45 12 * * *"
+        }
+    ]
+}
