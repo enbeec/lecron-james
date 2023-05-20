@@ -4,7 +4,9 @@
 
 - fetch data periodically using serverless cron
 - publish fetched data to object storage
-- used to cache LeBron James's bio from [https://free-nba.p.rapidapi.com/players/237](https://rapidapi.com/theapiguy/api/free-nba/)
+- used to cache LeBron James's bio 
+  - from [https://free-nba.p.rapidapi.com/players/237](https://rapidapi.com/theapiguy/api/free-nba/)
+  - to [linode object storage](https://sb-mirror.us-southeast-1.linodeobjects.com/lebron.json)
 - runs every day at 7:45am Central (12:45 UTC)
 
 ## Tools
