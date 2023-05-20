@@ -25,3 +25,7 @@ I thought it would be funny and informative to make LeBron James into an interfa
 First, configure `.env` with everything in the `Env` interface from `api/_env.ts`. Run `vercel dev` and [invoke the function locally](localhost:3000/api/lecron-james) to make sure the values are correct.
 
 Finally, run the `scripts/bootstrap.sh` to set up your production environment variables and secrets. This step should only be done once and if something goes wrong you will need to run `scripts/bootstrap.sh --undo` to revert everything.
+
+## Deployment
+
+I wrote a deploy script that uses a similar array/loop to inject secrets as environment variables at deploy time.
