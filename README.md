@@ -1,5 +1,11 @@
 # Le`cron` James
 
+**Currently down:** while I migrate my hosting. It is not high priority at the moment. My apologies.
+
+Here's a screenshot of what you might see were it deployed.
+
+![Screenshot 2023-08-15 at 02-04-09 https __sb-mirror us-southeast-1 linodeobjects com](https://github.com/enbeec/lecron-james/assets/23690586/c672f201-a948-46d8-8092-0c6da8d90f86)
+
 ## What it does
 
 - fetch data periodically using serverless cron
