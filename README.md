@@ -8,7 +8,7 @@
   - from
     [https://free-nba.p.rapidapi.com/players/237](https://rapidapi.com/theapiguy/api/free-nba/)
   - to 
-    [linode object storage](https://sb-mirror.us-southeast-1.linodeobjects.com/lebron.json)
+    [~linode~ object storage]() (*currently being migrated to vultr*)
 - runs every day at 7:45am Central (12:45 UTC)
 
 ## Tools
